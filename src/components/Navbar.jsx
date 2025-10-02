@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoDocumentAttachOutline } from "react-icons/io5";
 
 const email = "basantmahato@zohomail.in";
+const resume = "https://www.canva.com/design/DAGmB39xLoQ/NDMutESCHfFDuWOmeLsrGA/view?utm_content=DAGmB39xLoQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7138daa618";
 
 
 // let nameDecoration = "<"
@@ -66,7 +67,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-icon">
-        <a href="/public/basantmahato.pdf"  title='Resume'><IoDocumentAttachOutline /></a> 
+        <a href={resume} title='Resume'><IoDocumentAttachOutline /></a> 
       </div>
 
       <a href={`mailto:${email}`} className="navbar-contact-button">
