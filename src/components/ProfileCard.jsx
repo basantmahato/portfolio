@@ -22,7 +22,7 @@ const ProfileCard = () => {
 
 
     const handleScroll = (e) => {
-    e.preventDefault(); // Prevents default anchor jump
+    e.preventDefault(); 
     const targetElement = document.getElementById('about-me-section');
     
     if (targetElement) {

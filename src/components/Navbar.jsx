@@ -10,7 +10,7 @@ const email = "basantmahato@zohomail.in";
 // let nameDecoration2 = "/>"
 
  const handleScrollHome = (e) => {
-    e.preventDefault(); // Prevents default anchor jump
+    e.preventDefault(); 
     const targetElement = document.getElementById('profile-card-container');
     
     if (targetElement) {
@@ -22,7 +22,7 @@ const email = "basantmahato@zohomail.in";
   };
 
    const handleScrollAbout = (e) => {
-    e.preventDefault(); // Prevents default anchor jump
+    e.preventDefault(); 
     const targetElement = document.getElementById('about-me-section');
     
     if (targetElement) {
@@ -34,7 +34,7 @@ const email = "basantmahato@zohomail.in";
   };
 
    const handleScrollProjects = (e) => {
-    e.preventDefault(); // Prevents default anchor jump
+    e.preventDefault(); 
     const targetElement = document.getElementById('projects-section');
     
     if (targetElement) {

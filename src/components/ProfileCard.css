@@ -1,12 +1,10 @@
-/* Minimalist Black and White Theme */
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
-  --accent-color: #8A2BE2; /* A subtle purple accent for the button/dynamic title */
+  --accent-color: #8A2BE2;
   --light-gray: #ccc;
 }
 
-/* Base Container and Layout (Desktop) */
 .profile-card-container {
   display: flex;
   justify-content: center;
@@ -14,17 +12,14 @@
   gap: 50px;
   max-width: 1200px;
   margin: 80px auto 40px auto;
-  min-height: 70vh; /* Ensures the component takes up a decent screen space */
+  min-height: 70vh;
   padding: 0 40px;
-  position: relative; /* For scroll prompt positioning */
-  background-color: var(--secondary-color); /* White background */
-  width: 100%; /* Full width */
+  position: relative;
+  background-color: var(--secondary-color);
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* -------------------- */
-/* LEFT SIDE: Content */
-/* -------------------- */
 .profile-content {
   max-width: 450px;
   color: var(--primary-color);
@@ -32,7 +27,7 @@
 }
 
 .greeting-text {
-  font-size: 3.5rem; /* Larger than image, reduced for dark theme clarity */
+  font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 10px 0;
   color: var(--primary-color);
@@ -42,18 +37,17 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0 0 15px 0;
-  color: var(--accent-color); /* Highlight dynamic text */
-  transition: color 0.3s ease; /* Smooth color change if applied */
+  color: var(--accent-color);
+  transition: color 0.3s ease;
 }
 
 .description-text {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: var(--light-gray); /* Lighter gray for body text */
+  color: var(--light-gray);
 }
 
-/* Contact Button */
 .contact-button {
   display: inline-flex;
   align-items: center;
@@ -69,7 +63,6 @@
   transition: all 0.3s ease;
 }
 
-/* Hover effect on Contact Button */
 .contact-button:hover {
   background-color: var(--accent-color);
   transform: translateY(-3px);
@@ -80,14 +73,10 @@
   font-size: 1.2rem;
 }
 
-/* -------------------- */
-/* RIGHT SIDE: Image */
-/* -------------------- */
 .profile-image-wrapper {
   position: relative;
-  width: 400px; /* Base width */
-  height: 400px; /* Base height */
-  /* Invisible container for the abstract shape/background */
+  width: 400px;
+  height: 400px;
 }
 
 .profile-image {
@@ -96,15 +85,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* Creates the abstract blob shape using border-radius */
   border-radius: 50% 50% 60% 40% / 60% 40% 60% 40%; 
-  background-color: var(--light-gray); /* Placeholder background */
+  background-color: var(--light-gray);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
 }
 
-/* Hover effect on Profile Image/Wrapper */
 .profile-image-wrapper:hover .profile-image {
   border-radius: 60% 40% 50% 50% / 40% 60% 50% 50%;
   transform: scale(1.03) rotate(1deg);
@@ -112,17 +99,11 @@
 }
 
 .image-placeholder {
-  /* This would be the actual image:
-  background-image: url('path-to-alexa-image.jpg'); */
   width: 100%;
   height: 100%;
-  background-color: #ffffff; /* Darker placeholder for contrast */
-  /* Adjust image positioning if needed */
+  background-color: #ffffff;
 }
 
-/* -------------------- */
-/* BOTTOM: Scroll Prompt */
-/* -------------------- */
 .scroll-down-prompt {
   position: absolute;
   bottom: 0;
@@ -146,10 +127,9 @@
 
 .scroll-icon {
   font-size: 1.2rem;
-  animation: bounce 2s infinite; /* Gentle bouncing animation */
+  animation: bounce 2s infinite;
 }
 
-/* Bouncing Animation */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -162,14 +142,9 @@
   }
 }
 
-/* ==================== */
-/* RESPONSIVENESS */
-/* ==================== */
-
-/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
   .profile-card-container {
-    flex-direction: column; /* Stacks content and image vertically */
+    flex-direction: column;
     text-align: center;
     gap: 30px;
     padding: 20px;
@@ -178,14 +153,14 @@
   
   .profile-content {
     max-width: 90%;
-    order: 2; /* Content below image */
+    order: 2;
   }
 
   .profile-image-wrapper {
     width: 300px;
     height: 300px;
     margin-top: 30px;
-    order: 1; /* Image above content */
+    order: 1;
   }
 
   .greeting-text {
@@ -196,7 +171,6 @@
     font-size: 0.95rem;
   }
 
-  /* Center button and scroll prompt */
   .contact-button {
     margin: 0 auto;
   }
@@ -210,7 +184,6 @@
   }
 }
 
-/* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
   .profile-card-container {
     gap: 20px;

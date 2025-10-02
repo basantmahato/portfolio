@@ -1,20 +1,15 @@
-/* Projects.css */
-
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
   --accent-color: #9333ea;
   --light-gray: #555;
-  --card-bg: #f5f5f5; /* Light background for cards */
+  --card-bg: #f5f5f5;
 }
 
-/* -------------------- */
-/* Base Section Styling */
-/* -------------------- */
 .projects-container {
   min-height: 100vh;
   padding: 80px 40px;
-  background-color: var(--dark-section, #f4f4f4); /* Using a very light gray background */
+  background-color: var(--dark-section, #f4f4f4);
   color: var(--primary-color);
   font-family: sans-serif;
   
@@ -40,12 +35,8 @@
   text-align: center;
 }
 
-/* -------------------- */
-/* Project Grid and Cards */
-/* -------------------- */
 .projects-grid {
   display: grid;
-  /* Desktop: 3 columns */
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
@@ -65,14 +56,12 @@
   overflow: hidden;
 }
 
-/* HOVER EFFECT 1: Project Card Lift and Accent Border */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   border-color: var(--accent-color);
 }
 
-/* Subtle background accent animation on hover */
 .project-card::before {
   content: '';
   position: absolute;
@@ -105,10 +94,9 @@
   font-size: 0.95rem;
   color: var(--light-gray);
   margin-bottom: 20px;
-  flex-grow: 1; /* Pushes links to the bottom */
+  flex-grow: 1;
 }
 
-/* Tech Tags */
 .project-tech-list {
   display: flex;
   flex-wrap: wrap;
@@ -126,21 +114,18 @@
   transition: background-color 0.3s ease;
 }
 
-/* HOVER EFFECT 2: Tech Tags */
 .project-card:hover .tech-tag {
   background-color: var(--accent-color);
   color: var(--secondary-color);
 }
 
-/* Project Links */
 .project-links {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: auto; /* Aligns links consistently at the bottom */
+  margin-top: auto;
 }
 
-/* HOVER EFFECT 3: Live Link Button */
 .live-link-button {
   display: inline-flex;
   align-items: center;
@@ -164,7 +149,6 @@
   font-size: 1rem;
 }
 
-/* HOVER EFFECT 4: Repo Link Button */
 .repo-link-button {
   color: var(--primary-color);
   font-size: 1.8rem;
@@ -176,24 +160,11 @@
   transform: scale(1.1);
 }
 
-/* -------------------- */
-/* KEYFRAME ANIMATIONS */
-/* -------------------- */
-/* We can use an animation to subtly highlight the icon on card load/hover if desired */
-/* @keyframes icon-pulse { ... } */
-
-
-/* ==================== */
-/* RESPONSIVENESS */
-/* ==================== */
-
-/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
   .projects-container {
     padding: 60px 20px;
   }
   
-  /* Tablet: 2 columns */
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -217,13 +188,11 @@
   }
 }
 
-/* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
   .projects-container {
     padding: 40px 15px;
   }
   
-  /* Mobile: 1 column */
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 25px;

@@ -1,16 +1,11 @@
-/* ContactFooter.css */
-
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
   --accent-color: #9333ea;
   --light-gray: #ccc;
-  --dark-bg: #1a1a1a; /* Dark background for the footer */
+  --dark-bg: #1a1a1a;
 }
 
-/* -------------------- */
-/* Base Footer Styling */
-/* -------------------- */
 .contact-footer-container {
   background-color: var(--dark-bg);
   color: var(--secondary-color);
@@ -24,9 +19,6 @@
   width: 100%;
 }
 
-/* -------------------- */
-/* Call to Action (CTA) */
-/* -------------------- */
 .contact-cta {
   margin-bottom: 60px;
   max-width: 800px;
@@ -45,7 +37,6 @@
   margin-bottom: 30px;
 }
 
-/* CTA Button */
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -59,25 +50,21 @@
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
-  animation: pulse-shadow-white 4s infinite; /* Gentle pulsing animation */
+  animation: pulse-shadow-white 4s infinite;
 }
 
-/* HOVER EFFECT 1: CTA Button */
 .cta-button:hover {
   background-color: var(--accent-color);
   color: var(--secondary-color);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 20px rgba(147, 51, 234, 0.6);
-  animation: none; /* Stop pulsing on hover */
+  animation: none;
 }
 
 .mail-icon {
   font-size: 1.4rem;
 }
 
-/* -------------------- */
-/* Details and Social */
-/* -------------------- */
 .contact-details-wrapper {
   display: flex;
   justify-content: space-between;
@@ -89,7 +76,6 @@
   margin-bottom: 20px;
 }
 
-/* Contact Links Group */
 .contact-links-group {
   display: flex;
   flex-direction: column;
@@ -107,7 +93,6 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* HOVER EFFECT 2: Contact Links */
 .contact-link-item:hover {
   color: var(--accent-color);
   transform: translateX(5px);
@@ -117,7 +102,6 @@
   font-size: 1.2rem;
 }
 
-/* Social Media Icons Group */
 .social-links-group {
   display: flex;
   gap: 25px;
@@ -132,15 +116,11 @@
   font-size: 1.8rem;
 }
 
-/* HOVER EFFECT 3: Social Icons */
 .social-icon-link:hover {
   color: var(--accent-color);
   transform: translateY(-4px) scale(1.1);
 }
 
-/* -------------------- */
-/* Copyright */
-/* -------------------- */
 .footer-copyright {
   width: 100%;
   max-width: 800px;
@@ -152,9 +132,6 @@
   margin: 0;
 }
 
-/* -------------------- */
-/* KEYFRAME ANIMATIONS */
-/* -------------------- */
 @keyframes pulse-shadow-white {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
@@ -167,12 +144,6 @@
   }
 }
 
-
-/* ==================== */
-/* RESPONSIVENESS */
-/* ==================== */
-
-/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
   .contact-footer-container {
     padding: 60px 20px 20px 20px;
@@ -183,13 +154,13 @@
   }
   
   .contact-details-wrapper {
-    flex-direction: column; /* Stack details and social links vertically */
+    flex-direction: column;
     gap: 30px;
     align-items: center;
   }
   
   .contact-links-group {
-    align-items: center; /* Center the contact links */
+    align-items: center;
   }
   
   .social-links-group {
@@ -201,7 +172,6 @@
   }
 }
 
-/* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
   .contact-footer-container {
     padding: 40px 15px 15px 15px;

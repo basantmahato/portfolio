@@ -1,14 +1,9 @@
-/* Navbar.css (Hover Effects Added) */
-
-/* Base Navbar Container */
 .navbar-container {
-
   position: fixed; 
-  top: 20px; /* Maintains the spacing from the top edge */
-  left: 50%; /* Starts at the center of the viewport */
-  transform: translateX(-50%); /* Shifts back by half its width to perfectly center */
-  z-index: 1000; /* Ensures it stays above other content */
-
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 
   display: flex;
   justify-content: space-between; 
@@ -22,7 +17,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo Text Styling */
 .navbar-logo {
   color: white;
   font-family: sans-serif;
@@ -38,7 +32,6 @@
   display: inline-block;
 }
 
-/* Main Navigation Links */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -60,18 +53,14 @@
   font-size: 16px;
   font-weight: 500;
   padding: 5px 0;
-  /* ADD: Smooth transition for hover color */
   transition: color 0.3s ease, transform 0.3s ease; 
 }
 
-/* HOVER EFFECT 1: Navigation Links */
 .navbar-links a:hover {
   color: #aaaaaa;
-  /* Subtle vertical shift for link hover effect */
   transform: translateY(-1px); 
 }
 
-/* Icons Styling */
 .navbar-icon {
   background-color: transparent;
   display: flex;
@@ -83,30 +72,25 @@
   color: white;
   margin-left: 15px;
   flex-shrink: 0;
-  /* ADD: Smooth transition for icon hover effect */
   transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .navbar-icon a {
   color: white;
   display: flex;
-  /* Ensure the icon itself has a transition */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* HOVER EFFECT 2: Icons */
 .navbar-icon a:hover {
-  color: #aaaaaa; /* Change icon color on hover */
-  transform: translateY(-2px) scale(1.05); /* Lift and slightly enlarge the icon */
+  color: #8A2BE2;
+  transform: translateY(-2px) scale(1.05);
 }
 
 .navbar-icon a:hover svg {
-    /* Target the SVG inside the anchor for consistency */
-    color: #aaaaaa; 
+  color: #8A2BE2; 
 }
 
 
-/* Contact Button Styling */
 .navbar-contact-button {
   background-color: white;
   color: #1a1a1a;
@@ -122,22 +106,15 @@
   max-width: 200px;
   display: flex;
   align-items: center;
-  /* ADD: Smooth transition for hover effects */
   transition: all 0.3s ease; 
 }
 
-/* HOVER EFFECT 3: Contact Button (Dark Theme Aesthetic) */
 .navbar-contact-button:hover {
-  /* Change button background to dark, and text to white */
   background-color: #8A2BE2; 
   color: white;
-  transform: translateY(-2px); /* Lift button */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-
-/* ------------------ */
-/* RESPONSIVENESS */
-/* ------------------ */
 
 @media (max-width: 850px) {
   .navbar-container {
@@ -166,7 +143,6 @@
     font-size: 13px;
     padding: 6px 10px;
     margin-left: 15px;
-    /* FIX: Button is hidden as per logic for this breakpoint */
     display: none; 
   }
 }

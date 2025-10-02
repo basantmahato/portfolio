@@ -14,7 +14,7 @@ import {
 } from 'react-icons/fa'; 
 
  const handleScroll = (e) => {
-    e.preventDefault(); // Prevents default anchor jump
+    e.preventDefault(); 
     const targetElement = document.getElementById('projects-section');
     
     if (targetElement) {

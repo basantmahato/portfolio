@@ -1,5 +1,3 @@
-/* AboutMe.css (FIXED FOR HORIZONTAL ICONS) */
-
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
@@ -8,16 +6,12 @@
   --dark-section: #f4f4f4;
 }
 
-/* -------------------- */
-/* Base Section Styling */
-/* -------------------- */
 .about-me-container {
   min-height: 80vh;
   padding: 100px 40px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-family: sans-serif;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,18 +35,15 @@
   gap: 80px;
 }
 
-/* -------------------- */
-/* LEFT SIDE: TECH ICONS (NEW STYLING) */
-/* -------------------- */
 .about-me-icons-wrapper {
   flex-shrink: 0;
-  width: 300px; /* Base width */
+  width: 300px;
   padding: 20px;
 }
 
 .tech-stack-list {
   list-style: none;
-  display: flex; /* Arrange items horizontally */
+  display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0;
@@ -60,30 +51,23 @@
 }
 
 .tech-icon-item {
-  /* Gives space around each icon */
   padding: 10px;
-  /* Hover transition */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* HOVER EFFECT 1: Individual Icons */
 .tech-icon-item:hover {
-  transform: translateY(-5px) scale(1.1); /* Lift and slightly enlarge */
-  color: var(--accent-color); /* Change color on hover */
-  animation: pulse-shadow 1s infinite alternate; /* Apply shadow pulse */
+  transform: translateY(-5px) scale(1.1);
+  color: var(--accent-color);
+  animation: pulse-shadow 1s infinite alternate;
 }
 
 .tech-icon {
-  font-size: 3.5rem; /* Size of the icons */
+  font-size: 3.5rem;
   color: var(--primary-color);
   display: block;
-  /* Ensure icon color transitions */
   transition: color 0.3s ease;
 }
 
-/* -------------------- */
-/* Right Side: Text & Stats (Existing styling retained) */
-/* -------------------- */
 .about-me-text-content {
   max-width: 600px;
 }
@@ -102,7 +86,6 @@
   margin-bottom: 30px;
 }
 
-/* Stats Grid */
 .about-me-stats {
   display: flex;
   gap: 40px;
@@ -115,7 +98,6 @@
   padding: 10px 0;
 }
 
-/* HOVER EFFECT 2: Stats */
 .stat-item:hover {
   transform: translateY(-3px);
 }
@@ -135,7 +117,6 @@
   text-transform: uppercase;
 }
 
-/* Button */
 .view-projects-button {
   display: inline-flex;
   align-items: center;
@@ -151,7 +132,6 @@
   transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT 3: Button */
 .view-projects-button:hover {
   background-color: var(--accent-color);
   transform: translateY(-3px);
@@ -162,24 +142,15 @@
   font-size: 1.2rem;
 }
 
-/* -------------------- */
-/* KEYFRAME ANIMATIONS */
-/* -------------------- */
 @keyframes pulse-shadow {
     0% {
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
     100% {
-        box-shadow: 0 0 10px rgba(147, 51, 234, 0.8); /* Accent color pulse */
+        box-shadow: 0 0 10px rgba(147, 51, 234, 0.8);
     }
 }
 
-
-/* ==================== */
-/* RESPONSIVENESS */
-/* ==================== */
-
-/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
   .about-me-container {
     padding: 80px 20px;
@@ -187,21 +158,21 @@
   }
   
   .about-me-content-wrapper {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; 
     gap: 40px;
   }
   
   .about-me-icons-wrapper {
-    width: 100%; /* Icons can use full width */
-    order: 1; /* Icons appear above text content */
+    width: 100%;
+    order: 1;
   }
 
   .tech-stack-list {
-    justify-content: center; /* Center icons on tablet/mobile */
+    justify-content: center;
   }
 
   .tech-icon {
-    font-size: 3rem; /* Slightly smaller icons */
+    font-size: 3rem;
   }
 
   .about-me-title {
@@ -209,7 +180,7 @@
   }
 
   .about-me-text-content {
-    order: 2; /* Text content below icons */
+    order: 2;
     max-width: 100%;
   }
   
@@ -222,7 +193,6 @@
   }
 }
 
-/* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
   .about-me-container {
     padding: 60px 15px;
@@ -234,7 +204,7 @@
   }
   
   .tech-icon {
-    font-size: 2.5rem; /* Smallest icon size */
+    font-size: 2.5rem;
   }
 
   .about-me-subtitle {
@@ -242,7 +212,7 @@
   }
   
   .about-me-stats {
-    flex-direction: column; /* Stack stats vertically */
+    flex-direction: column; 
     gap: 15px;
   }
   
