@@ -75,6 +75,10 @@
   transition: color 0.3s ease, transform 0.3s ease; 
 }
 
+.navbar-icon link{
+  text-decoration: none;
+}
+
 .navbar-icon a {
   color: white;
   display: flex;

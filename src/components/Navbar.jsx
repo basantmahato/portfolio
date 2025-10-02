@@ -2,9 +2,10 @@ import React from 'react';
 import './Navbar.css';
 import { FaGithub } from "react-icons/fa";
 import { IoDocumentAttachOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const email = "basantmahato@zohomail.in";
-const resume = "https://www.canva.com/design/DAGmB39xLoQ/NDMutESCHfFDuWOmeLsrGA/view?utm_content=DAGmB39xLoQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7138daa618";
+// const resume = "https://www.canva.com/design/DAGmB39xLoQ/NDMutESCHfFDuWOmeLsrGA/view?utm_content=DAGmB39xLoQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7138daa618";
 
 
 // let nameDecoration = "<"
@@ -67,7 +68,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-icon">
-        <a href={resume} title='Resume'><IoDocumentAttachOutline /></a> 
+        <li style={{listStyleType: "none"}}><Link to="/resume"><IoDocumentAttachOutline /></Link></li>
       </div>
 
       <a href={`mailto:${email}`} className="navbar-contact-button">
