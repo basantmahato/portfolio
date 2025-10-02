@@ -1,0 +1,238 @@
+/* ContactFooter.css */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #9333ea;
+  --light-gray: #ccc;
+  --dark-bg: #1a1a1a; /* Dark background for the footer */
+}
+
+/* -------------------- */
+/* Base Footer Styling */
+/* -------------------- */
+.contact-footer-container {
+  background-color: var(--dark-bg);
+  color: var(--secondary-color);
+  padding: 80px 40px 20px 40px;
+  font-family: sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* -------------------- */
+/* Call to Action (CTA) */
+/* -------------------- */
+.contact-cta {
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: var(--light-gray);
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  animation: pulse-shadow-white 4s infinite; /* Gentle pulsing animation */
+}
+
+/* HOVER EFFECT 1: CTA Button */
+.cta-button:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.6);
+  animation: none; /* Stop pulsing on hover */
+}
+
+.mail-icon {
+  font-size: 1.4rem;
+}
+
+/* -------------------- */
+/* Details and Social */
+/* -------------------- */
+.contact-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 20px;
+}
+
+/* Contact Links Group */
+.contact-links-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* HOVER EFFECT 2: Contact Links */
+.contact-link-item:hover {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.link-icon {
+  font-size: 1.2rem;
+}
+
+/* Social Media Icons Group */
+.social-links-group {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icon-link {
+  color: var(--secondary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+}
+
+/* HOVER EFFECT 3: Social Icons */
+.social-icon-link:hover {
+  color: var(--accent-color);
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* -------------------- */
+/* Copyright */
+/* -------------------- */
+.footer-copyright {
+  width: 100%;
+  max-width: 800px;
+}
+
+.footer-copyright p {
+  color: var(--light-gray);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* -------------------- */
+/* KEYFRAME ANIMATIONS */
+/* -------------------- */
+@keyframes pulse-shadow-white {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+/* ==================== */
+/* RESPONSIVENESS */
+/* ==================== */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-footer-container {
+    padding: 60px 20px 20px 20px;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-details-wrapper {
+    flex-direction: column; /* Stack details and social links vertically */
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .contact-links-group {
+    align-items: center; /* Center the contact links */
+  }
+  
+  .social-links-group {
+    gap: 35px;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .contact-footer-container {
+    padding: 40px 15px 15px 15px;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+  
+  .contact-links-group {
+    font-size: 0.9rem;
+  }
+  
+  .social-links-group {
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+  }
+  
+  .footer-copyright p {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,210 @@
+/* Navbar.css (Hover Effects Added) */
+
+/* Base Navbar Container */
+.navbar-container {
+
+  position: fixed; 
+  top: 20px; /* Maintains the spacing from the top edge */
+  left: 50%; /* Starts at the center of the viewport */
+  transform: translateX(-50%); /* Shifts back by half its width to perfectly center */
+  z-index: 1000; /* Ensures it stays above other content */
+
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  padding: 10px 20px;
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo Text Styling */
+.navbar-logo {
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navbar-logo span {
+  display: inline-block;
+}
+
+/* Main Navigation Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  flex-shrink: 0.1;
+  min-width: fit-content;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  /* ADD: Smooth transition for hover color */
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+/* HOVER EFFECT 1: Navigation Links */
+.navbar-links a:hover {
+  color: #aaaaaa;
+  /* Subtle vertical shift for link hover effect */
+  transform: translateY(-1px); 
+}
+
+/* Icons Styling */
+.navbar-icon {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  margin-left: 15px;
+  flex-shrink: 0;
+  /* ADD: Smooth transition for icon hover effect */
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.navbar-icon a {
+  color: white;
+  display: flex;
+  /* Ensure the icon itself has a transition */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* HOVER EFFECT 2: Icons */
+.navbar-icon a:hover {
+  color: #aaaaaa; /* Change icon color on hover */
+  transform: translateY(-2px) scale(1.05); /* Lift and slightly enlarge the icon */
+}
+
+.navbar-icon a:hover svg {
+    /* Target the SVG inside the anchor for consistency */
+    color: #aaaaaa; 
+}
+
+
+/* Contact Button Styling */
+.navbar-contact-button {
+  background-color: white;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  /* ADD: Smooth transition for hover effects */
+  transition: all 0.3s ease; 
+}
+
+/* HOVER EFFECT 3: Contact Button (Dark Theme Aesthetic) */
+.navbar-contact-button:hover {
+  /* Change button background to dark, and text to white */
+  background-color: #8A2BE2; 
+  color: white;
+  transform: translateY(-2px); /* Lift button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+}
+
+/* ------------------ */
+/* RESPONSIVENESS */
+/* ------------------ */
+
+@media (max-width: 850px) {
+  .navbar-container {
+    max-width: 95%;
+  }
+
+  .navbar-logo {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .navbar-links li {
+    margin: 0 8px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .navbar-icon {
+    margin-left: 10px;
+  }
+  
+  .navbar-contact-button {
+    max-width: 120px;
+    font-size: 13px;
+    padding: 6px 10px;
+    margin-left: 15px;
+    /* FIX: Button is hidden as per logic for this breakpoint */
+    display: none; 
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    justify-content: space-between;
+    padding: 8px 10px;
+    max-width: 95%;
+    width: auto;
+  }
+  
+  .navbar-contact-button {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex;
+    margin-right: auto;
+  }
+  
+  .navbar-links li {
+    margin: 0 5px;
+  }
+  
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .navbar-logo {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .navbar-icon {
+    margin: 0 2px;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+  }
+}

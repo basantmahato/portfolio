@@ -1,0 +1,243 @@
+/* Projects.css */
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #9333ea;
+  --light-gray: #555;
+  --card-bg: #f5f5f5; /* Light background for cards */
+}
+
+/* -------------------- */
+/* Base Section Styling */
+/* -------------------- */
+.projects-container {
+  min-height: 100vh;
+  padding: 80px 40px;
+  background-color: var(--dark-section, #f4f4f4); /* Using a very light gray background */
+  color: var(--primary-color);
+  font-family: sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projects-subtitle {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  margin-bottom: 60px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* -------------------- */
+/* Project Grid and Cards */
+/* -------------------- */
+.projects-grid {
+  display: grid;
+  /* Desktop: 3 columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.project-card {
+  background-color: var(--secondary-color);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT 1: Project Card Lift and Accent Border */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+/* Subtle background accent animation on hover */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent-color);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+  transform: translateY(0);
+}
+
+.project-icon-top {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--light-gray);
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pushes links to the bottom */
+}
+
+/* Tech Tags */
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background-color: #f0f0f0;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* HOVER EFFECT 2: Tech Tags */
+.project-card:hover .tech-tag {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto; /* Aligns links consistently at the bottom */
+}
+
+/* HOVER EFFECT 3: Live Link Button */
+.live-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.live-link-button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  font-size: 1rem;
+}
+
+/* HOVER EFFECT 4: Repo Link Button */
+.repo-link-button {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.repo-link-button:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* -------------------- */
+/* KEYFRAME ANIMATIONS */
+/* -------------------- */
+/* We can use an animation to subtly highlight the icon on card load/hover if desired */
+/* @keyframes icon-pulse { ... } */
+
+
+/* ==================== */
+/* RESPONSIVENESS */
+/* ==================== */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 60px 20px;
+  }
+  
+  /* Tablet: 2 columns */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .projects-title {
+    font-size: 2.5rem;
+  }
+  
+  .projects-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .project-card {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .projects-container {
+    padding: 40px 15px;
+  }
+  
+  /* Mobile: 1 column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+  }
+  
+  .project-card {
+    padding: 25px;
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+  }
+}
