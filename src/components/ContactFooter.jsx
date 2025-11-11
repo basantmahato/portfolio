@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 const ContactFooter = () => {
   const currentYear = new Date().getFullYear();
   const email = "basantmahato@zohomail.in";
-  const phone = "+91 87096 67260"; 
+  // const phone = "+91 87096 "; 
 
   return (
     <footer id="contact-section" className="contact-footer-container">
@@ -33,9 +33,9 @@ const ContactFooter = () => {
           <a href={`mailto:${email}`} className="contact-link-item">
             <IoMailOutline className="link-icon" /> {email}
           </a>
-          <a href={`tel:${phone.replace(/\s/g, '')}`} className="contact-link-item">
+          {/* <a href={`tel:${phone.replace(/\s/g, '')}`} className="contact-link-item">
             <IoCallOutline className="link-icon" /> {phone}
-          </a>
+          </a> */}
         </div>
 
         <div className="social-links-group">
