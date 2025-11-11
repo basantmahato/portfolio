@@ -72,7 +72,7 @@ const ContactFooter = () => {
       
       <div className="footer-copyright">
         <p>
-          &copy; {currentYear} Basant. All rights reserved. | Built with React
+          &copy; {currentYear} | All rights reserved | Built with React
         </p>
       </div>
       
