@@ -40,7 +40,7 @@ const Projects = () => {
         My Work
       </h2>
       <p className="projects-subtitle">
-        A selection of recent projects showcasing my skills in Frontend development.
+        A selection of recent projects showcasing my skills in Web development.
       </p>
 
       <div className="projects-grid">
