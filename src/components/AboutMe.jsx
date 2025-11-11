@@ -75,7 +75,7 @@ const AboutMe = () => {
         
         <div className="about-me-text-content">
           <p className="about-me-subtitle">
-            A dedicated Frontend Developer  focused on building clean, efficient, and user-friendly web experiences.
+            A dedicated Web Developer  focused on building clean, efficient, and user-friendly web experiences.
           </p>
           
           <p className="about-me-body">
