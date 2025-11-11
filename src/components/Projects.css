@@ -29,7 +29,7 @@
 
 .projects-subtitle {
   font-size: 1.1rem;
-  color: var(--light-gray);
+  color: #767676;
   margin-bottom: 60px;
   max-width: 600px;
   text-align: center;
@@ -92,7 +92,7 @@
 
 .project-description {
   font-size: 0.95rem;
-  color: var(--light-gray);
+  color: #767676;
   margin-bottom: 20px;
   flex-grow: 1;
 }

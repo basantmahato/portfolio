@@ -21,17 +21,17 @@ const ProfileCard = () => {
   }, []);
 
 
-    const handleScroll = (e) => {
-    e.preventDefault(); 
-    const targetElement = document.getElementById('about-me-section');
+  //   const handleScroll = (e) => {
+  //   e.preventDefault(); 
+  //   const targetElement = document.getElementById('about-me-section');
     
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start' 
-      });
-    }
-  };
+  //   if (targetElement) {
+  //     targetElement.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start' 
+  //     });
+  //   }
+  // };
 
   return (
     <section id='profile-card-container' className="profile-card-container">
@@ -57,14 +57,14 @@ const ProfileCard = () => {
         <div className="profile-image">
    
           <div className="image-placeholder"> 
-            <img src="/pf.jpg" alt="" />
+            <img src="/pf2.png" alt="" />
           </div>
         </div>
       </div>
 
-      <a href="#next-content-section" className="scroll-down-prompt" onClick={handleScroll}>
+      {/* <a href="#next-content-section" className="scroll-down-prompt" onClick={handleScroll}>
         <IoArrowDown className="scroll-icon" /> Scroll Down
-      </a>
+      </a> */}
     </section>
   );
 };
