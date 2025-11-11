@@ -3,7 +3,7 @@ import './ProfileCard.css';
 import { FiSend } from 'react-icons/fi'; 
 import { IoArrowDown , IoMail  } from 'react-icons/io5'; 
 
-const jobs = ["Front-End Developer", "Coder", "Editor", "Designer"]; 
+const jobs = ["Developer", "Coder", "Editor", "Designer"]; 
   const email = "basantmahato@zohomail.in";
 
 const ProfileCard = () => {
