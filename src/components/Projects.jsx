@@ -24,11 +24,19 @@ const projectData = [
   {
     id: 3,
     title: 'SnapNews',
-    description: 'An react news app with publisher and reader view (ROLE BASED AUTHENTICATION).',
+    description: 'A react news app with publisher and reader view (ROLE BASED AUTHENTICATION).',
     tech: ['MERN STACK'],
     liveLink: 'https://snap-news-app.vercel.app/',
     repoLink: 'https://github.com/basantmahato/',
   },
+  {
+    id: 4,
+    title: 'TwoLeaf Services Website',
+    description: 'A react based services website for a digital marketing agency.',
+    tech: ['React', 'CSS3'],
+    liveLink: 'https://twoleafservices.com/',
+    repoLink: 'https://github.com/basantmahato/',
+  }
 ];
 
 const Projects = () => {
