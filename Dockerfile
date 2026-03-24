@@ -4,7 +4,6 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copy package files
-# Doing this first helps cache the npm install step if dependencies haven't changed
 COPY package*.json ./
 
 # Install dependencies
@@ -16,29 +15,29 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Stage 2: Serve the application using Nginx
+
+# Stage 2: Serve using Nginx
 FROM nginx:alpine
 
-# Remove the default nginx site configuration
+# Remove default config
 RUN rm /etc/nginx/conf.d/default.conf
 
-# Create a new Nginx configuration for a Single Page Application (SPA)
-# This ensures that react-router gets all routes and falls back to index.html
+# Add proper SPA config (IMPORTANT FIX HERE)
 RUN echo "server { \
     listen 80; \
-    server_name localhost; \
-    location / { \
+    server_name _; \
     root /usr/share/nginx/html; \
     index index.html index.htm; \
+    location / { \
     try_files \$uri \$uri/ /index.html; \
     } \
     }" > /etc/nginx/conf.d/default.conf
 
-# Copy the built application from the builder stage
+# Copy built files
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose port 80
+# Expose port
 EXPOSE 80
 
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Start nginx
+CMD [\"nginx\", \"-g\", \"daemon off;\"]
