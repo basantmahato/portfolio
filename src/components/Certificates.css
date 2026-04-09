@@ -1,0 +1,134 @@
+.certificates-container {
+  min-height: 60vh;
+  padding: 80px 40px;
+  background-color: var(--dark-section, #f4f4f4);
+  color: var(--primary-color, #000);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificates-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--primary-color, #000);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.certificates-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #767676);
+  margin-bottom: 60px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.certificate-card {
+  background-color: var(--secondary-color, #fff);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-accent {
+  height: 5px;
+  width: 100%;
+}
+
+.certificate-content {
+  padding: 25px;
+}
+
+.certificate-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-color, #000);
+  line-height: 1.4;
+}
+
+.certificate-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.certificate-issuer {
+  font-weight: 600;
+  color: var(--accent-color, #9333ea);
+}
+
+.certificate-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #767676);
+}
+
+.credential-id {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #767676);
+  margin-bottom: 20px;
+  font-family: monospace;
+  background-color: var(--dark-section, #f4f4f4);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color, #9333ea);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.verify-link:hover {
+  color: var(--primary-color, #000);
+}
+
+@media (max-width: 992px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-container {
+    padding: 60px 20px;
+  }
+
+  .certificates-title {
+    font-size: 2.5rem;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}

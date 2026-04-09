@@ -1,11 +1,11 @@
 import React from 'react';
 import './ContactFooter.css';
-import { IoMailOutline, IoCallOutline } from 'react-icons/io5';
+import { IoMailOutline } from 'react-icons/io5';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const ContactFooter = () => {
   const currentYear = new Date().getFullYear();
-  const email = "basantmahato@zohomail.in";
+  const email = "basantkumar72580@gmail.com";
   // const phone = "+91 87096 "; 
 
   return (
@@ -19,11 +19,6 @@ const ContactFooter = () => {
         <p className="cta-subtitle">
           I'm currently open to new opportunities and freelance projects. Let's connect!
         </p>
-        
-        <a href={`mailto:${email}`} className="cta-button">
-          Get in Touch
-          <IoMailOutline className="mail-icon" />
-        </a>
       </div>
 
       <div className="contact-details-wrapper">
