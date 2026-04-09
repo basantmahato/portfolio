@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #9333ea;
+  --light-gray: #555;
+  --card-bg: #f5f5f5;
+  --dark-section: #f4f4f4;
+  --text-secondary: #767676;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --secondary-color: #1a1a1a;
+  --accent-color: #a855f7;
+  --light-gray: #a0a0a0;
+  --card-bg: #2d2d2d;
+  --dark-section: #121212;
+  --text-secondary: #a0a0a0;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -7,5 +27,11 @@ html{
 *{
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-section);
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

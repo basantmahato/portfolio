@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import { IoArrowForward, IoCodeSlashOutline } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
-
 
 const projectData = [
   {
@@ -12,14 +11,7 @@ const projectData = [
     tech: ['React', 'CSS3',],
     liveLink: 'https://dentalspa-five.vercel.app/',
     repoLink: 'https://github.com/basantmahato/',
-  },
-  {
-    id: 2,
-    title: 'My Personal Portfolio',
-    description: 'A responsive frontend application built with React, showcasing projects and my skills.',
-    tech: ['React', 'CSS3'],
-    liveLink: 'https://www.basantmahato.in',
-    repoLink: 'https://github.com/basantmahato/',
+    image: '/projects/dental-clinic.png',
   },
   {
     id: 3,
@@ -28,18 +20,30 @@ const projectData = [
     tech: ['MERN STACK'],
     liveLink: 'https://snap-news-app.vercel.app/',
     repoLink: 'https://github.com/basantmahato/',
+    image: '/projects/snapnews.png',
   },
   {
     id: 4,
     title: 'TwoLeaf Services Website',
     description: 'A react based services website for a digital marketing agency.',
     tech: ['React', 'CSS3'],
-    liveLink: 'https://twoleafservices.com/',
+    liveLink: 'https://twoleafinitial.vercel.app/',
     repoLink: 'https://github.com/basantmahato/',
+    image: '/projects/twoleaf.png',
   }
 ];
 
+const filterCategories = ['All', 'React', 'MERN', 'CSS'];
+
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = activeFilter === 'All'
+    ? projectData
+    : projectData.filter(project =>
+        project.tech.some(t => t.toLowerCase().includes(activeFilter.toLowerCase()))
+      );
+
   return (
   
     <section id="projects-section" className="projects-container">
@@ -51,13 +55,34 @@ const Projects = () => {
         A selection of recent projects showcasing my skills in Web development.
       </p>
 
+      <div className="projects-filter">
+        {filterCategories.map((category) => (
+          <button
+            key={category}
+            className={`filter-button ${activeFilter === category ? 'active' : ''}`}
+            onClick={() => setActiveFilter(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
       <div className="projects-grid">
-        {projectData.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div 
             key={project.id} 
             className={`project-card project-card-${index % 2 === 0 ? 'even' : 'odd'}`}
           >
-            <div className="project-icon-top">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="project-icon-top" style={{ display: 'none' }}>
               <IoCodeSlashOutline className="project-icon" />
             </div>
             

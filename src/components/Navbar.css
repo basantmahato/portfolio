@@ -94,6 +94,22 @@
   color: #8A2BE2; 
 }
 
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #8A2BE2;
+  transform: translateY(-2px) scale(1.05);
+}
 
 .navbar-contact-button {
   background-color: white;

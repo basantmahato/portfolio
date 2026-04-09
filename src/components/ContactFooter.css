@@ -53,6 +53,12 @@
   animation: pulse-shadow-white 4s infinite;
 }
 
+.contact-form-wrapper {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+
 .cta-button:hover {
   background-color: var(--accent-color);
   color: var(--secondary-color);
