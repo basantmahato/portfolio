@@ -8,10 +8,19 @@ const projectData = [
     id: 1,
     title: 'Dental Clinic Site',
     description: 'A responsive single-page application built with React and custom CSS, focusing on performance and modern design principles.',
-    tech: ['React', 'CSS3',],
+    tech: ['React', 'CSS3'],
     liveLink: 'https://dentalspa-five.vercel.app/',
-    repoLink: 'https://github.com/basantmahato/',
+    repoLink: 'https://github.com/bassantmahato/',
     image: '/projects/dental-clinic.png',
+  },
+  {
+    id: 2,
+    title: 'PyLearn.app',
+    description: 'An interactive Python learning platform featuring structured tutorials, code challenges, and hands-on practice for mastering Python from basics to advanced.',
+    tech: [ 'Next', 'ReactNative', 'Express'],
+    liveLink: 'https://pylearn.app/',
+    repoLink: 'https://github.com/basantmahato/',
+    image: '/projects/pylearn.png',
   },
   {
     id: 3,
@@ -33,7 +42,7 @@ const projectData = [
   }
 ];
 
-const filterCategories = ['All', 'React', 'MERN', 'CSS'];
+const filterCategories = ['All', 'React', 'MERN', 'Python', 'CSS'];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');

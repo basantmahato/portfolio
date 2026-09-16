@@ -31,6 +31,20 @@ const experienceData = [
       'Designed database schemas using Mongoose ODM',
       'Created role-based access for Publishers and News Readers'
     ]
+  },
+  {
+    id: 3,
+    role: 'Data Analyst Intern',
+    company: 'Adityapur Auto Cluster',
+    location: 'Jamshedpur (On-site)',
+    duration: 'Jun 2025 - Aug 2025',
+    description: 'Performed data preprocessing, exploratory data analysis (EDA), and data visualization using Python and modern data science libraries. Cleaned and analyzed real-world datasets including a comprehensive movie dataset.',
+    highlights: [
+      'Utilized Python libraries including NumPy, Pandas, Matplotlib, and Seaborn for data manipulation and visualization',
+      'Performed extensive data cleaning, handling missing values, duplicates, and data transformations on a movie dataset',
+      'Built informative plots and visual charts to analyze patterns, distributions, and correlations',
+      'Conducted exploratory data analysis (EDA) to extract key insights and present data-driven conclusions'
+    ]
   }
 ];
 
