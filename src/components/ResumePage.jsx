@@ -8,7 +8,7 @@ const ResumePage = () => {
       
      
       <iframe 
-        src="/basantmahato.pdf" 
+        src="./ResumeBasantKumarMahato.pdf" 
         width="100%" 
         height="1100px" 
         title="Basant's Resume"
